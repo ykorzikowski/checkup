@@ -46,11 +46,14 @@ func (s Notifier) Notify(results []types.Result) error {
 // Send request via MSTeams API to create incident
 func (s Notifier) Send(result types.Result) error {
 
+  title := ""
+  markdown := true
+
   section := msteams.Section {
-    ActivityTitle: result.Title,
-    ActivitySubtitle: "",
-    ActivityImage: "",
-    Markdown: true
+    ActivityTitle: &result.Title,
+    ActivitySubTitle: &title,
+    ActivityImage: &title,
+    Markdown: &markdown,
   }
   section.AddFact(msteams.Fact { Name: result.Title, Value: result.Endpoint }).AddFact(msteams.Fact { Name: "Status", Value: strings.ToUpper(fmt.Sprint(result.Status())) })
 
