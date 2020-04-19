@@ -125,6 +125,7 @@ github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d/go.mod h1
 github.com/smartystreets/goconvey v1.6.4 h1:fv0U8FUIMPNf1L9lnHLvLhgicrIVChEkdzIKYqbNC9s=
 github.com/smartystreets/goconvey v1.6.4/go.mod h1:syvi0/a8iFYH4r/RixwvyeAJjdLS9QV7WQ/tjFTllLA=
 github.com/soheilhy/cmux v0.1.4/go.mod h1:IM3LyeVVIOuxMH7sFAkER9+bJ4dT7Ms6E4xg4kGIyLM=
+github.com/sourcegraph/checkup v0.2.0 h1:wGyzU3l6cCoiR7ZG0j9nsF6M8yvKTVOxnP27UOn87k0=
 github.com/spaolacci/murmur3 v0.0.0-20180118202830-f09979ecbc72/go.mod h1:JwIasOWyU6f++ZhiEuf87xNszmSA2myDM2Kzu9HwQUA=
 github.com/spf13/afero v1.1.2/go.mod h1:j4pytiNVoe2o6bmDsKpLACNPDBIoEAkihy7loJ1B0CQ=
 github.com/spf13/cast v1.3.0/go.mod h1:Qx5cxh0v+4UWYiBimWS+eyWzqEqokIECu5etghLkUJE=
@@ -144,6 +145,7 @@ github.com/ugorji/go v1.1.4/go.mod h1:uQMGLiO92mf5W77hV/PUCpI3pbzQx3CRekS0kk+RGr
 github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q53MR2AWcXfiuqkDkRtnGDLqkBTpCHuJHxtU=
 github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:aYKd//L2LvnjZzWKhF00oedf4jCCReLcmhLdhm1A27Q=
 github.com/ykorzikowski/checkup v0.2.0 h1:LWosD+RDMnBSawBfrLfzQfPeIVpqTkSaKsUTYuuIu14=
+github.com/ykorzikowski/checkup v0.2.0 h1:wGyzU3l6cCoiR7ZG0j9nsF6M8yvKTVOxnP27UOn87k0=
 github.com/ykorzikowski/msteams-go-webhook v0.0.0-20200419152915-21edb2bea5b0 h1:ZOzZ+UgzfDTXin+VVEatN2VTqOs0LU+Ja5SJ6iDOEDM=
 github.com/ykorzikowski/msteams-go-webhook v0.0.0-20200419152915-21edb2bea5b0/go.mod h1:ySo6zQl4rxe6f81Csdcuhy341yyIYhueUTirWx1ol7U=
 go.etcd.io/bbolt v1.3.2/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=

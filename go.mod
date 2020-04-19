@@ -1,4 +1,4 @@
-module github.com/sourcegraph/checkup
+module github.com/ykorzikowski/checkup
 
 go 1.13
 

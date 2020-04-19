@@ -9,7 +9,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/sourcegraph/checkup/types"
+	"github.com/ykorzikowski/checkup/types"
 )
 
 // Type should match the package name

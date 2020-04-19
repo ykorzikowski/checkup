@@ -17,7 +17,7 @@ import (
 
 	"github.com/google/go-github/github"
 
-	"github.com/sourcegraph/checkup/types"
+	"github.com/ykorzikowski/checkup/types"
 )
 
 var (

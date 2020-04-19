@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/sourcegraph/checkup/notifier/mail"
-	"github.com/sourcegraph/checkup/notifier/slack"
+	"github.com/ykorzikowski/checkup/notifier/mail"
+	"github.com/ykorzikowski/checkup/notifier/slack"
   "github.com/ykorzikowski/checkup/notifier/msteams"
 )
 

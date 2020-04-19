@@ -1,13 +1,13 @@
 <img src="https://i.imgur.com/UWhSoQj.png" width="450" alt="Checkup">
 
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/sourcegraph/checkup) [![Sourcegraph](https://sourcegraph.com/github.com/sourcegraph/checkup/-/badge.svg)](https://sourcegraph.com/github.com/sourcegraph/checkup?badge)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/ykorzikowski/checkup) [![Sourcegraph](https://sourcegraph.com/github.com/ykorzikowski/checkup/-/badge.svg)](https://sourcegraph.com/github.com/ykorzikowski/checkup?badge)
 
 
 **Checkup is distributed, lock-free, self-hosted health checks and status pages, written in Go.**
 
 **It features an elegant, minimalistic CLI and an idiomatic Go library. They are completely interoperable and their configuration is beautifully symmetric.**
 
-Checkup was created by Matt Holt, author of the [Caddy web server](https://caddyserver.com). It is maintained and sponsored by [Sourcegraph](https://sourcegraph.com). If you'd like to dive into the source, you can [start here](https://sourcegraph.com/github.com/sourcegraph/checkup/-/def/GoPackage/github.com/sourcegraph/checkup/-/Checkup).
+Checkup was created by Matt Holt, author of the [Caddy web server](https://caddyserver.com). It is maintained and sponsored by [Sourcegraph](https://sourcegraph.com). If you'd like to dive into the source, you can [start here](https://sourcegraph.com/github.com/ykorzikowski/checkup/-/def/GoPackage/github.com/ykorzikowski/checkup/-/Checkup).
 
 This tool is a work-in-progress. Please use liberally (with discretion) and report any bugs!
 
@@ -60,10 +60,10 @@ There are 3 components:
 
 ## Quick Start
 
-[Download Checkup](https://github.com/sourcegraph/checkup/releases/latest) for your platform and put it in your PATH, or install from source:
+[Download Checkup](https://github.com/ykorzikowski/checkup/releases/latest) for your platform and put it in your PATH, or install from source:
 
 ```bash
-$ go get -u github.com/sourcegraph/checkup/cmd/checkup
+$ go get -u github.com/ykorzikowski/checkup/cmd/checkup
 ```
 
 You'll need Go 1.8 or newer. Verify it's installed properly:
@@ -97,13 +97,13 @@ You can configure Checkup entirely with a simple JSON document. You should confi
 
 Save the checkup configuration file as `checkup.json` in your working directory.
 
-We will show JSON samples below, to get you started. **But please [refer to the godoc](https://godoc.org/github.com/sourcegraph/checkup) for a comprehensive description of each type of checker, storage, and notifier you can configure!**
+We will show JSON samples below, to get you started. **But please [refer to the godoc](https://godoc.org/github.com/ykorzikowski/checkup) for a comprehensive description of each type of checker, storage, and notifier you can configure!**
 
-Here are the configuration structures you can use, which are explained fully [in the godoc](https://godoc.org/github.com/sourcegraph/checkup). **Only the required fields are shown, so consult the godoc for more.**
+Here are the configuration structures you can use, which are explained fully [in the godoc](https://godoc.org/github.com/ykorzikowski/checkup). **Only the required fields are shown, so consult the godoc for more.**
 
 #### HTTP Checkers
 
-**[godoc: HTTPChecker](https://godoc.org/github.com/sourcegraph/checkup/check/http)**
+**[godoc: HTTPChecker](https://godoc.org/github.com/ykorzikowski/checkup/check/http)**
 
 ```js
 {
@@ -117,7 +117,7 @@ Here are the configuration structures you can use, which are explained fully [in
 
 #### TCP Checkers
 
-**[godoc: TCPChecker](https://godoc.org/github.com/sourcegraph/checkup/check/tcp)**
+**[godoc: TCPChecker](https://godoc.org/github.com/ykorzikowski/checkup/check/tcp)**
 
 ```js
 {
@@ -129,7 +129,7 @@ Here are the configuration structures you can use, which are explained fully [in
 
 #### DNS Checkers
 
-**[godoc: DNSChecker](https://godoc.org/github.com/sourcegraph/checkup/check/dns)**
+**[godoc: DNSChecker](https://godoc.org/github.com/ykorzikowski/checkup/check/dns)**
 
 ```js
 {
@@ -142,7 +142,7 @@ Here are the configuration structures you can use, which are explained fully [in
 
 #### TLS Checkers
 
-**[godoc: TLSChecker](https://godoc.org/github.com/sourcegraph/checkup/check/tls)**
+**[godoc: TLSChecker](https://godoc.org/github.com/ykorzikowski/checkup/check/tls)**
 
 ```js
 {
@@ -155,7 +155,7 @@ Here are the configuration structures you can use, which are explained fully [in
 
 #### Amazon S3 Storage
 
-**[godoc: S3](https://godoc.org/github.com/sourcegraph/checkup/check/s3)**
+**[godoc: S3](https://godoc.org/github.com/ykorzikowski/checkup/check/s3)**
 
 ```js
 {
@@ -167,12 +167,12 @@ Here are the configuration structures you can use, which are explained fully [in
 }
 ```
 
-S3 is the default storage provider assumed by the status page, so the only change needed for the status page is in the [config.js](https://github.com/sourcegraph/checkup/blob/master/statuspage/js/config.js) file, with your public, read-only credentials.
+S3 is the default storage provider assumed by the status page, so the only change needed for the status page is in the [config.js](https://github.com/ykorzikowski/checkup/blob/master/statuspage/js/config.js) file, with your public, read-only credentials.
 
 
 #### File System Storage
 
-**[godoc: FS](https://godoc.org/github.com/sourcegraph/checkup/storage/fs)**
+**[godoc: FS](https://godoc.org/github.com/ykorzikowski/checkup/storage/fs)**
 
 ```js
 {
@@ -182,18 +182,18 @@ S3 is the default storage provider assumed by the status page, so the only chang
 }
 ```
 
-Change [index.html](https://github.com/sourcegraph/checkup/blob/master/statuspage/index.html) to load fs.js instead of s3.js:
+Change [index.html](https://github.com/ykorzikowski/checkup/blob/master/statuspage/index.html) to load fs.js instead of s3.js:
 
 ```diff
 - <script src="js/s3.js"></script>
 + <script src="js/fs.js"></script>
 ```
 
-Then fill out [config.js](https://github.com/sourcegraph/checkup/blob/master/statuspage/js/config.js) so the status page knows how to load your check files.
+Then fill out [config.js](https://github.com/ykorzikowski/checkup/blob/master/statuspage/js/config.js) so the status page knows how to load your check files.
 
 #### GitHub Storage
 
-**[godoc: GitHub](https://godoc.org/github.com/sourcegraph/checkup/storage/github)**
+**[godoc: GitHub](https://godoc.org/github.com/ykorzikowski/checkup/storage/github)**
 
 ```js
 {
@@ -222,7 +222,7 @@ Where "dir" is a subdirectory within the repo to push all the check files. Setup
 
 #### SQL Storage (sqlite3/PostgreSQL)
 
-**[godoc: SQL](https://godoc.org/github.com/sourcegraph/checkup/storage/sql)**
+**[godoc: SQL](https://godoc.org/github.com/ykorzikowski/checkup/storage/sql)**
 
 Postgres or sqlite3 databases can be used as storage backends.
 
@@ -341,12 +341,12 @@ $ checkup provision s3
 
 ### Manual Provisioning
 
-If you'd rather do this manually, see the [instructions on the wiki](https://github.com/sourcegraph/checkup/wiki/Provisioning-S3-Manually) but keeping in mind the region must be **US Standard**.
+If you'd rather do this manually, see the [instructions on the wiki](https://github.com/ykorzikowski/checkup/wiki/Provisioning-S3-Manually) but keeping in mind the region must be **US Standard**.
 
 
 ## Setting up the status page
 
-In statuspage/js, use the contents of [config_template.js](https://github.com/sourcegraph/checkup/blob/master/statuspage/js/config_template.js) to fill out [config.js](https://github.com/sourcegraph/checkup/blob/master/statuspage/js/config.js), which is used by the status page. This is where you specify how to access the storage system you just provisioned for check files.
+In statuspage/js, use the contents of [config_template.js](https://github.com/ykorzikowski/checkup/blob/master/statuspage/js/config_template.js) to fill out [config.js](https://github.com/ykorzikowski/checkup/blob/master/statuspage/js/config.js), which is used by the status page. This is where you specify how to access the storage system you just provisioned for check files.
 
 The status page can be served over HTTPS by running `caddy -host status.mysite.com` on the command line. (You can use [getcaddy.com](https://getcaddy.com) to install Caddy.)
 
@@ -408,7 +408,7 @@ Checkup is as easy to use in a Go program as it is on the command line.
 
 First, create an IAM user with credentials as described in the section above.
 
-Then `go get github.com/sourcegraph/checkup` and import it.
+Then `go get github.com/ykorzikowski/checkup` and import it.
 
 Then replace `ACCESS_KEY_ID` and `SECRET_ACCESS_KEY` below with the actual values for that user. Keep those secret. You'll also replace `BUCKET_NAME` with the unique bucket name to store your check files:
 
@@ -431,7 +431,7 @@ This method creates a new IAM user with read-only permission to S3 and also crea
 
 ### Using Go to perform checks
 
-First, `go get github.com/sourcegraph/checkup` and import it. Then configure it:
+First, `go get github.com/ykorzikowski/checkup` and import it. Then configure it:
 
 ```go
 c := checkup.Checkup{

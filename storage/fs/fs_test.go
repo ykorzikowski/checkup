@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sourcegraph/checkup/types"
+	"github.com/ykorzikowski/checkup/types"
 )
 
 func TestStorage(t *testing.T) {

@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/sourcegraph/checkup/storage/fs"
-	"github.com/sourcegraph/checkup/storage/github"
-	"github.com/sourcegraph/checkup/storage/s3"
-	"github.com/sourcegraph/checkup/storage/sql"
+	"github.com/ykorzikowski/checkup/storage/fs"
+	"github.com/ykorzikowski/checkup/storage/github"
+	"github.com/ykorzikowski/checkup/storage/s3"
+	"github.com/ykorzikowski/checkup/storage/sql"
 )
 
 func storageDecode(typeName string, config json.RawMessage) (Storage, error) {

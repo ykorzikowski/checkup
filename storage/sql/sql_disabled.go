@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/sourcegraph/checkup/types"
+	"github.com/ykorzikowski/checkup/types"
 )
 
 type Storage struct{}

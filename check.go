@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/sourcegraph/checkup/check/dns"
-	"github.com/sourcegraph/checkup/check/exec"
-	"github.com/sourcegraph/checkup/check/http"
-	"github.com/sourcegraph/checkup/check/tcp"
-	"github.com/sourcegraph/checkup/check/tls"
+	"github.com/ykorzikowski/checkup/check/dns"
+	"github.com/ykorzikowski/checkup/check/exec"
+	"github.com/ykorzikowski/checkup/check/http"
+	"github.com/ykorzikowski/checkup/check/tcp"
+	"github.com/ykorzikowski/checkup/check/tls"
 )
 
 func checkerDecode(typeName string, config json.RawMessage) (Checker, error) {
